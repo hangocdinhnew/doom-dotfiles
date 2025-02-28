@@ -48,7 +48,7 @@
 
 (setq evil-insert-state-cursor '("white" bar))
 
-(setq doom-font (font-spec :family "Hack Nerd Font Mono" :weight 'bold :size 14))
+(setq doom-font (font-spec :family "Hack Nerd Font Mono" :weight 'bold :size 16))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -86,3 +86,6 @@
   (setq lsp-completion-provider :capf)
   (setq company-minimum-prefix-length 1
         company-idle-delay 0.0))
+
+(map! :leader
+      "c f" #'lsp-format-buffer)
