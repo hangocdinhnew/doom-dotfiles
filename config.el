@@ -89,3 +89,8 @@
 
 (map! :leader
       "c f" #'lsp-format-buffer)
+
+
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "TAB") #'company-complete-selection)
+  (define-key company-active-map (kbd "<tab>") #'company-complete-selection))
